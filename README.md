@@ -1,1 +1,5 @@
 # Moveo-AudioLoopMachine.github.io
+
+In the following URL http://lior.42web.io/, you can see the project in action which is hosted by InfinityFree.
+
+My project is built from 3 files which are HTML, JavaScript, and CSS. To describe the project, I’ll answer how I did each of the demands. Creating a page with 8 rows for each audio channel (although there were 9 in the folder), I wrote in the JavaScript file the “buildAudioDiv” function which has a set HTML template that will build it for each row with unique random colors.  The mute and loop buttons were both designed as toggle buttons which are built with a checkbox. The play and pause button are under one button and control all channels. Once the stop button is pressed all audio will be paused and then go back to the start. The cursor which is on top of all channels is built by two input ranges, the 1st  is a small box, and the 2nd is a thin line with 1px width that goes across all rows. The user may drag and drop the slider freely and the audio will be sped up while moving and play regularly from where it has been dropped.
