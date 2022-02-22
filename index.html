@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="AudioLoopMachine.js"></script>
+    <link rel="stylesheet" href="AudioLoopMachineStyle.css">
+
+    <meta charset="utf-8" />
+    <title>Moveo - Loop Machine</title>
+</head>
+
+<body onload="startup()">
+    <!-- Audio -->
+    <div id="audioDivMain" class="flex-container">
+        <div class="flex-item" style="position: absolute; padding-left: 44%">
+            <input id="mainAudioSliderSquare" type="range" min="0" max="100" value="0" step="1" />
+            <input id="mainAudioSliderLine" type="range" min="0" max="100" value="0" step="1" />
+        </div>
+    </div>
+
+    <!-- Media Controllers -->
+    <div style="display:flex; flex-wrap:wrap; justify-content:center">
+        <input type="button" id="pauseAndPlayButton" class="mediaButton" style="background-color: dodgerblue" value="Play" onclick="pauseAndPlayAudio()">
+        <input type="button" class="mediaButton" style="background-color: darkgray" value="Stop" onclick="stopAudio()">
+        <label class="loopToggleLabel">
+            <input type="checkbox" id="loopCheckBox" onclick="loopAudio()">
+                <lang class="loopToggleSpan">
+                    <span class="loopOff">Loop✗</span>
+                    <span class="loopOn">Loop✓</span>
+                </lang>
+        </label>
+    </div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+﻿div#timebox {
+    display: inline-block;
+    width: 150px;
+    background: #ffffff;
+    text-align: center;
+    color: black;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 20% 40% 20%;
+    padding: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    text-align: center;
+}
+
+.flex-item {
+    flex: 50%;
+}
+
+input#mainAudioSliderLine {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 0px;
+}
+
+    input#mainAudioSliderLine::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: 1px solid #000000;
+        width: 1px;
+        height: 1530px;
+        background: black;
+    }
+
+input#mainAudioSliderSquare {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 0px;
+}
+
+    input#mainAudioSliderSquare::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: 1px solid #000000;
+        width: 15px;
+        height: 40px;
+        background: black;
+    }
+
+input.audioSlider {
+    -webkit-appearance: none;
+    overflow: hidden;
+    width: 100px;
+    height: 10px;
+}
+
+    input.audioSlider::-webkit-slider-runnable-track {
+        height: 10px;
+        -webkit-appearance: none;
+        color: #13bba4;
+        margin-top: -1px;
+    }
+
+    input.audioSlider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 1px;
+        height: 1px;
+        background: black;
+        box-shadow: -100px 0 0 100px black;
+    }
+
+.muteToggleLabel {
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+    .muteToggleLabel input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.muteToggleSpan {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .muteToggleSpan:before {
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 20px;
+        left: 4px;
+        bottom: 4px;
+        border: 1px solid black;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .muteToggleSpan {
+    background-color: green;
+}
+
+    input:checked + .muteToggleSpan:before {
+        -webkit-transform: translateX(25px);
+        -ms-transform: translateX(25px);
+        transform: translateX(100px);
+    }
+
+.muteOn {
+    display: none;
+}
+
+.muteOn, .muteOff {
+    color: black;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    font-family: Arial;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input:checked + .muteToggleSpan .muteOn {
+    display: block;
+}
+
+input:checked + .muteToggleSpan .muteOff {
+    display: none;
+}
+
+.loopToggleLabel {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+    .loopToggleLabel input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.loopToggleSpan {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: darkgrey;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .loopToggleSpan:before {
+        position: absolute;
+        content: "";
+        height: 40px;
+        width: 20px;
+        left: 5px;
+        bottom: 5px;
+        border: 1px solid black;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .loopToggleSpan {
+    background-color: dodgerblue;
+}
+
+    input:checked + .loopToggleSpan:before {
+        -webkit-transform: translateX(25px);
+        -ms-transform: translateX(25px);
+        transform: translateX(90px);
+    }
+
+.loopOn {
+    display: none;
+}
+
+.loopOn, .loopOff {
+    color: black;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    font-family: Arial;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input:checked + .loopToggleSpan .loopOn {
+    display: block;
+}
+
+input:checked + .loopToggleSpan .loopOff {
+    display: none;
+}
+
+.mediaButton {
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+}
